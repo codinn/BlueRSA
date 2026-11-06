@@ -558,10 +558,10 @@ extension CryptorRSA {
 				let privateKeyAbbributes: [NSObject: Any] = [:]
 			#else
 				let publicKeyAttributes: [NSObject: Any] = [
-					kSecAttrIsPermanent: true,
+					kSecAttrIsPermanent: false,
 				]
 				let privateKeyAbbributes: [NSObject: Any] = [
-					kSecAttrIsPermanent: true,
+					kSecAttrIsPermanent: false,
 				]
 			#endif
 
