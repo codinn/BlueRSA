@@ -574,7 +574,6 @@ extension CryptorRSA {
 		   
 			var error: Unmanaged<CFError>?
 
-			// The keys are automatically stored in the keychain
 			guard let privKey = SecKeyCreateRandomKey(parameters as CFDictionary, &error),
 				let pubKey = SecKeyCopyPublicKey(privKey) else {
 				throw Error(code: ERR_INIT_PK, reason: "Could not generate rsa pair for \(keySize.bits) bits (\(String(describing: error)))")
